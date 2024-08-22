@@ -7,14 +7,30 @@
 <html>
 	<head>
 		<title>Miguel Morona Mínguez</title>
+		    <style>
+		        /* Default light mode */
+		        body {
+		            background-color: white;
+		            color: black;
+		            transition: background-color 0.5s, color 0.5s;
+		        }
+		
+		        /* Dark mode */
+		        body.dark-mode {
+		            background-color: #2c2c2c; /* Dark background color */
+		            color: white; /* Light text color */
+		        }
+		
+		        h1, p {
+		            margin: 20px;
+		        }
+		    </style>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
-		<button id="toggle-dark-mode">Toggle Dark Mode</button>
-
+		<button id="change-bg-color">Change Background Color</button>
 		<!-- Header -->
 			<header id="header">
 				<div class="inner">
@@ -164,6 +180,14 @@
 						<li><a href="https://lichess.org/@/Usuario_139" class="icon solid fa-chess-knight"><span class="label">Lichess</span></a></li>
 					</ul>
 				</div>
+				<script>
+				        const bgButton = document.getElementById('change-bg-color');
+				        
+				        // Toggle dark mode on button click
+				        bgButton.addEventListener('click', () => {
+				            document.body.classList.toggle('dark-mode'); // Toggle the 'dark-mode' class
+				        });
+				    </script>
 			</footer>
 
 		<!-- Scripts -->
